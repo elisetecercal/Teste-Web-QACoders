@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-08-26T16:40:31.459180" rpa="false" schemaversion="5">
+<suite id="s1" name="Editar Empresa" source="/Users/jpcercal/robotFramework/Specs/editar_empresa.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-08-26T16:40:31.532927" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T16:40:31.532815" elapsed="1.016597"/>
+</kw>
+<test id="s1-t1" name="Realizar Login e Cadastrar no Empresa" line="12">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:32.550188" level="INFO">Opening url 'https://automacao.qacoders-academy.com.br'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-26T16:40:32.550069" elapsed="2.259633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="email"]</arg>
+<arg>40s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T16:40:34.809919" elapsed="0.658290"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:35.469334" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//*[@id="email"]'.</msg>
+<arg>${Login.email}</arg>
+<arg>${PreencheFormularioLogin.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:35.468448" elapsed="0.155750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="password"]</arg>
+<arg>40s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T16:40:35.624348" elapsed="0.009776"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:35.635025" level="INFO">Typing text '1234@Test' into text field '//*[@id="password"]'.</msg>
+<arg>${Login.senha}</arg>
+<arg>${PreencheFormularioLogin.senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:35.634413" elapsed="0.048238"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:35.683154" level="INFO">Clicking element '//*[@id="login"]'.</msg>
+<arg>${Login.btnEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:35.682834" elapsed="0.040826"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T16:40:38.725841" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T16:40:35.723858" elapsed="3.002454"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:38.728842" level="INFO">Clicking element '//*[@id="Cadastros"]'.</msg>
+<arg>${CadastrosEmpresa.bntCadastros}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:38.727144" elapsed="0.050697"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:38.778977" level="INFO">Clicking element '//*[@id="Empresa"]'.</msg>
+<arg>${CadastrosEmpresa.bntEmpresa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:38.778055" elapsed="0.033432"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:38.893884" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-26T16:40:38.811658" elapsed="0.082286"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="Novo Cadastro"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T16:40:38.894070" elapsed="0.439569"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.334519" level="INFO">Clicking element '//*[@id="Novo Cadastro"]'.</msg>
+<arg>${CadastrosEmpresa.bntNovoCadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.333906" elapsed="0.043148"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.378196" level="INFO">Typing text 'Ferreira Janelas' into text field '//*[@id="companyName"]'.</msg>
+<arg>${CadastrosEmpresa.razaoSocial}</arg>
+<arg>${PreencheFormularioEmpresa.razaoSocial}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.377561" elapsed="0.054166"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.432667" level="INFO">Typing text 'Janelas Ferreiras Ltda' into text field '//*[@id="fantasyName"]'.</msg>
+<arg>${CadastrosEmpresa.nomeFantasia}</arg>
+<arg>${PreencheFormularioEmpresa.nomeFantasia}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.432027" elapsed="0.057034"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.490074" level="INFO">Typing text 'janelas@ferreira.com.br' into text field '//*[@id="companyMail"]'.</msg>
+<arg>${CadastrosEmpresa.emailEmpresa}</arg>
+<arg>${PreencheFormularioEmpresa.emailEmpresa}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.489387" elapsed="0.083505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.573776" level="INFO">Typing text '23243256409' into text field '//*[@id="matriz"]'.</msg>
+<arg>${CadastrosEmpresa.cnpj}</arg>
+<arg>${PreencheFormularioEmpresa.cnpj}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.573190" elapsed="0.047416"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.621544" level="INFO">Typing text '91919191' into text field '//*[@id="telephone"]'.</msg>
+<arg>${CadastrosEmpresa.telefone}</arg>
+<arg>${PreencheFormularioEmpresa.telefone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.621005" elapsed="0.053232"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.675016" level="INFO">Typing text 'Realizamos concerto e instalação de janelas de aluminio' into text field '//*[@id="serviceDescription"]'.</msg>
+<arg>${CadastrosEmpresa.descricaoDoServico}</arg>
+<arg>${PreencheFormularioEmpresa.descricaoDoServico}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.674402" elapsed="0.086136"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.761405" level="INFO">Typing text 'Joao Alberto da Silva' into text field '//*[@id="fullName"]'.</msg>
+<arg>${CadastrosEmpresa.nomeDoResponsavel}</arg>
+<arg>${PreencheFormularioEmpresa.nomeDoResponsavel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.760689" elapsed="0.060726"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.822112" level="INFO">Typing text '3023123' into text field '//*[@id="zipCode"]'.</msg>
+<arg>${CadastrosEmpresa.cep}</arg>
+<arg>${PreencheFormularioEmpresa.cep}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.821592" elapsed="0.043474"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.865849" level="INFO">Typing text 'Brasil' into text field '//*[@id="country"]'.</msg>
+<arg>${CadastrosEmpresa.pais}</arg>
+<arg>${PreencheFormularioEmpresa.pais}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.865323" elapsed="0.045174"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.911238" level="INFO">Typing text 'São Paulo' into text field '//*[@id="city"]'.</msg>
+<arg>${CadastrosEmpresa.cidade}</arg>
+<arg>${PreencheFormularioEmpresa.cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.910716" elapsed="0.043177"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.954499" level="INFO">Typing text 'São Paulo' into text field '//*[@id="state"]'.</msg>
+<arg>${CadastrosEmpresa.estado}</arg>
+<arg>${PreencheFormularioEmpresa.estado}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.954043" elapsed="0.044041"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:39.999156" level="INFO">Typing text 'Vila Nova' into text field '//*[@id="district"]'.</msg>
+<arg>${CadastrosEmpresa.bairro}</arg>
+<arg>${PreencheFormularioEmpresa.bairro}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:39.998398" elapsed="0.039898"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:40.038928" level="INFO">Typing text 'Rua das Abelhas' into text field '//*[@id="street"]'.</msg>
+<arg>${CadastrosEmpresa.rua}</arg>
+<arg>${PreencheFormularioEmpresa.rua}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:40.038462" elapsed="0.044736"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:40.083848" level="INFO">Typing text '45' into text field '//*[@id="number"]'.</msg>
+<arg>${CadastrosEmpresa.numero}</arg>
+<arg>${PreencheFormularioEmpresa.numero}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:40.083381" elapsed="0.039443"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:40.123396" level="INFO">Typing text 'terceiro andar' into text field '//*[@id="complement"]'.</msg>
+<arg>${CadastrosEmpresa.complemento}</arg>
+<arg>${PreencheFormularioEmpresa.complemento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:40.122977" elapsed="0.053825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T16:40:40.177368" level="INFO">Clicking element '//*[@id="save"]'.</msg>
+<arg>${CadastrosEmpresa.bntSalvarNovo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T16:40:40.177018" elapsed="0.038499"/>
+</kw>
+<status status="PASS" start="2024-08-26T16:40:32.549694" elapsed="7.666062"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-26T16:40:40.216143" elapsed="0.080551"/>
+</kw>
+<status status="PASS" start="2024-08-26T16:40:31.459898" elapsed="8.836854"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Editar Empresa">Editar Empresa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

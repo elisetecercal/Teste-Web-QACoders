@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-10-09T12:11:23.295256" rpa="false" schemaversion="5">
+<suite id="s1" name="CT06 - criar User CampoEmailVazio" source="/Users/jpcercal/robotFramework/Specs/CT06 - criar_User_CampoEmailVazio.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-09T12:11:23.461813" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-09T12:11:23.461699" elapsed="1.297421"/>
+</kw>
+<test id="s1-t1" name="Realizar Login e Cadastrar novo Usuario Com Nome Vazio" line="12">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:24.760346" level="INFO">Opening url 'https://automacao.qacoders.dev.br/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-09T12:11:24.760076" elapsed="3.300695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.email}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.061034" elapsed="0.033391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:28.095280" level="INFO">Typing text 'sysadmin@qacoders.com' into text field '//*[@id="email"]'.</msg>
+<arg>${Login.email}</arg>
+<arg>${PreencheFormularioLogin.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.094600" elapsed="0.120374"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Login.senha}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.215127" elapsed="0.013386"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:28.229553" level="INFO">Typing text '1234@Test' into text field '//*[@id="password"]'.</msg>
+<arg>${Login.senha}</arg>
+<arg>${PreencheFormularioLogin.senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.228735" elapsed="0.047986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:28.277433" level="INFO">Clicking element '//*[@id="login"]'.</msg>
+<arg>${Login.btnEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.276930" elapsed="0.044137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-09T12:11:31.322179" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-09T12:11:28.321505" elapsed="3.001022"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:31.324710" level="INFO">Clicking element '//*[@id="Cadastros"]'.</msg>
+<arg>${CadastrosUsuario.bntCadastros}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:31.323087" elapsed="0.053156"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-09T12:11:34.377941" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-09T12:11:31.376472" elapsed="3.001635"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.379740" level="INFO">Clicking element '//*[@id="Usuários"]'.</msg>
+<arg>${CadastrosUsuario.bntUsuarios}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.378521" elapsed="0.056679"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CadastrosUsuario.bntNovoCadastro}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.437073" elapsed="0.011836"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.449479" level="INFO">Clicking element '//*[@id="Novo Cadastro"]'.</msg>
+<arg>${CadastrosUsuario.bntNovoCadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.449075" elapsed="0.024506"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CadastrosUsuario.NomeCompletoUsuario}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.473725" elapsed="0.010076"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.484607" level="INFO">Typing text 'André Knight' into text field '//*[@id="fullName"]'.</msg>
+<arg>${CadastrosUsuario.NomeCompletoUsuario}</arg>
+<arg>${PreencheFormularioUsuario['NomeCompletoUsuario']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.483986" elapsed="0.043714"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.528632" level="INFO">Typing text '' into text field '//*[@id="mail"]'.</msg>
+<arg>${CadastrosUsuario.EmailUsuario}</arg>
+<arg>${ValorVazio}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.528022" elapsed="0.044610"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.573408" level="INFO">Typing text 'ADMIN' into text field '//*[@id="accessProfile"]'.</msg>
+<arg>${CadastrosUsuario.PerfilDeAcessoUsuario}</arg>
+<arg>${PreencheFormularioUsuario['PerfilDeAcessoUsuario']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.572822" elapsed="0.040010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.613532" level="INFO">Typing text '96266760978' into text field '//*[@id="cpf"]'.</msg>
+<arg>${CadastrosUsuario.CPFUsuario}</arg>
+<arg>${PreencheFormularioUsuario['CPFUsuario']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.612978" elapsed="0.044046"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.657894" level="INFO">Typing text 'Alea@6756' into text field '//*[@id="password"]'.</msg>
+<arg>${CadastrosUsuario.SenhaUsuario}</arg>
+<arg>${PreencheFormularioUsuario['SenhaUsuario']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.657250" elapsed="0.059254"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.718342" level="INFO">Typing text 'Alea@6756' into text field '//*[@id="confirmPassword"]'.</msg>
+<arg>${CadastrosUsuario.ConfirmeSenhaUsuario}</arg>
+<arg>${PreencheFormularioUsuario['ConfirmeSenhaUsuario']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.716871" elapsed="0.038875"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.837527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="name%3DAntes_de_Salvar.png"&gt;&lt;img src="name%3DAntes_de_Salvar.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>name=Antes_de_Salvar.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.755899" elapsed="0.081690"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:34.838149" level="INFO">Clicking element '//*[@id="save"]'.</msg>
+<arg>${CadastrosUsuario.bntSalvarNovoUsuario}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.837734" elapsed="0.042360"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-09T12:11:37.881518" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-09T12:11:34.880498" elapsed="3.001132"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:37.947657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="name%3DDepois_de_Salvar.png"&gt;&lt;img src="name%3DDepois_de_Salvar.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>name=Depois_de_Salvar.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-09T12:11:37.881894" elapsed="0.065823"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:37.957279" level="INFO">Element 'xpath=//p[contains(@class, 'css-bbipig') and contains(text(), 'O campo email é obrigatório')]' is displayed.</msg>
+<arg>xpath=//p[contains(@class, 'css-bbipig') and contains(text(), 'O campo email é obrigatório')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-09T12:11:37.947861" elapsed="0.009474"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:11:37.957587" level="INFO">Verifying element 'xpath=//p[contains(@class, 'css-bbipig') and contains(text(), 'O campo email é obrigatório')]' contains exact text 'O campo email é obrigatório'.</msg>
+<arg>xpath=//p[contains(@class, 'css-bbipig') and contains(text(), 'O campo email é obrigatório')]</arg>
+<arg>O campo email é obrigatório</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:11:37.957471" elapsed="0.010305"/>
+</kw>
+<status status="PASS" start="2024-10-09T12:11:24.759440" elapsed="13.208485"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-09T12:11:37.968228" elapsed="0.116489"/>
+</kw>
+<status status="PASS" start="2024-10-09T12:11:23.295926" elapsed="14.788852"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CT06 - criar User CampoEmailVazio">CT06 - criar User CampoEmailVazio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
