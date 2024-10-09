@@ -1,0 +1,5 @@
+# Ignorar arquivos de screenshots
+*.png
+log.html
+report.html
+output.xml
