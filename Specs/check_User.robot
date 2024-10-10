@@ -6,7 +6,7 @@ Suite Setup     Open Browser    about:blank    chrome
 Suite Teardown  Close Browser
 
 *** Variables ***
-${url}=     https://automacao.qacoders-academy.com.br
+${url}=     https://automacao.qacoders.dev.br/login
 
 *** Test Cases ***
 Realizar Login e Cadastrar novo Usuario
